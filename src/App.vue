@@ -1,17 +1,17 @@
+<script setup>
+import appBarMenu from '@/components/appBarMenu.vue'
+</script>
+
 <template>
-	<v-app>
-		<v-main>
-			<router-view />
-		</v-main>
+	<v-app class="main-app">
+		<appBarMenu />
+		<router-view />
 	</v-app>
 </template>
 
-<script>
-export default {
-	name: 'App',
-
-	data: () => ({
-		//
-	}),
+<style lang="scss" scoped>
+.main-app {
+	color: $font-color;
+	background-color: $background-color;
 }
-</script>
+</style>

@@ -9,7 +9,6 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		eslintPlugin(),
-		// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
 		vuetify({
 			autoImport: true,
 		}),
@@ -20,17 +19,11 @@ export default defineConfig({
 			'@': path.resolve(__dirname, 'src'),
 		},
 	},
-	/* remove the need to specify .vue files https://vitejs.dev/config/#resolve-extensions
-  resolve: {
-    extensions: [
-      '.js',
-      '.json',
-      '.jsx',
-      '.mjs',
-      '.ts',
-      '.tsx',
-      '.vue',
-    ]
-  },
-  */
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: '@import "@/styles/main.scss";',
+			},
+		},
+	},
 })

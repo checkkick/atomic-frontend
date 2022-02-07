@@ -1,0 +1,49 @@
+@import './variables';
+
+#app {
+	font-family: $font-family;
+	color: $font-color;
+	background-color: $background-color;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: $letter-spacing;
+}
+
+h1 {
+	font-size: $font-size-large;
+	line-height: $line-height-large;
+	font-weight: normal;
+}
+
+h2 {
+	line-height: $line-height-medium;
+	font-size: $font-size-medium;
+	font-weight: normal;
+}
+
+p {
+	font-size: $font-size-small;
+	line-height: $line-height-small;
+	font-weight: normal;
+	letter-spacing: -0.025em;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.text-gradient {
+	background: linear-gradient(89.89deg, #ce5b82 0.07%, #af78db 57.33%, #b4d7f9 105.77%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.margin-left-default {
+	margin-left: $margin-default;
+}

@@ -4,5 +4,9 @@ import '@mdi/font/css/materialdesignicons.css'
 import { createVuetify } from 'vuetify'
 import 'vuetify/styles'
 
-export default createVuetify()
+export default createVuetify({
+	theme: {
+		options: { customProperties: true },
+	},
+})
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
