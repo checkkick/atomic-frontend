@@ -16,7 +16,10 @@ defineProps({
 
 <style lang="scss" scoped>
 .block {
-	transition: ease-in-out 1s;
+	position: relative;
+	background-image: none;
+	z-index: 1;
+	cursor: pointer;
 	border: $border-in-dark;
 	padding: 2rem;
 	display: flex;
@@ -38,16 +41,19 @@ defineProps({
 	letter-spacing: -0.05em;
 	color: white;
 }
-.block:hover {
-	background-color: black;
-	color: white;
-	cursor: pointer;
-	.block__icon,
-	.block__text {
-		color: white;
-	}
-	.menu__icon {
-		color: white;
-	}
+.block::before {
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: $linear-gradient;
+	z-index: -1;
+	transition: opacity 0.5s linear;
+	opacity: 0;
+}
+.block:hover::before {
+	opacity: 1;
 }
 </style>
