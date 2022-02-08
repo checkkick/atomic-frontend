@@ -15,33 +15,34 @@ const hiddenMenu = ref(false)
 			mdi-menu
 		</v-icon>
 	</nav>
-
-	<section v-if="hiddenMenu" class="menu">
-		<div class="menu__content flex-row">
-			<div class="menu__navigation flex-column">
-				<p class="menu__navigation__text">Новости</p>
-				<p class="menu__navigation__text">Клиенты</p>
-				<p class="menu__navigation__text">Кейсы</p>
-				<p class="menu__navigation__text">Вакансии</p>
-				<p class="menu__navigation__text">Контакты</p>
+	<transition name="fade">
+		<section v-if="hiddenMenu" class="menu">
+			<div class="menu__content flex-row">
+				<div class="menu__navigation flex-column">
+					<p class="menu__navigation__text">Новости</p>
+					<p class="menu__navigation__text">Клиенты</p>
+					<p class="menu__navigation__text">Кейсы</p>
+					<p class="menu__navigation__text">Вакансии</p>
+					<p class="menu__navigation__text">Контакты</p>
+				</div>
+				<div class="menu__about flex-row">
+					<app-block-about-square
+						icon="mdi-chat-outline"
+						text="Напишите нам"></app-block-about-square>
+					<app-block-about-square
+						icon="mdi-phone-outline"
+						text="Позвоните нам"
+						@close="hiddenMenu = !hiddenMenu"></app-block-about-square>
+					<app-block-about-square
+						icon="mdi-calendar-blank-outline"
+						text="Запишитесь на констультацию"></app-block-about-square>
+					<app-block-about-square
+						icon="mdi-send-outline"
+						text="Напишите на почту"></app-block-about-square>
+				</div>
 			</div>
-			<div class="menu__about flex-row">
-				<app-block-about-square
-					icon="mdi-chat-outline"
-					text="Напишите нам"></app-block-about-square>
-				<app-block-about-square
-					icon="mdi-phone-outline"
-					text="Позвоните нам"
-					@close="hiddenMenu = !hiddenMenu"></app-block-about-square>
-				<app-block-about-square
-					icon="mdi-calendar-blank-outline"
-					text="Запишитесь на констультацию"></app-block-about-square>
-				<app-block-about-square
-					icon="mdi-send-outline"
-					text="Напишите на почту"></app-block-about-square>
-			</div>
-		</div>
-	</section>
+		</section>
+	</transition>
 </template>
 
 <style lang="scss" scoped>
@@ -67,6 +68,22 @@ const hiddenMenu = ref(false)
 	cursor: pointer;
 	margin-right: $margin-default;
 	background-color: transparent;
+}
+.fade-enter-active {
+	animation: fade-in 0.5s;
+}
+.fade-leave-active {
+	animation: fade-in 0.5s reverse;
+}
+@keyframes fade-in {
+	0% {
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 .menu {
 	z-index: 2;
