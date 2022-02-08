@@ -1,10 +1,10 @@
 <script setup>
-import appBarMenu from '@/components/appBarMenu.vue'
+import AppBarMenu from './components/barMenu/appBarMenu.vue'
 </script>
 
 <template>
 	<v-app class="main-app">
-		<appBarMenu />
+		<AppBarMenu />
 		<router-view />
 	</v-app>
 </template>
