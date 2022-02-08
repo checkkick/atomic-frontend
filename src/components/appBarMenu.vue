@@ -1,55 +1,104 @@
 <script setup>
 import { ref } from 'vue'
+import appBlockAboutSquare from '@/components/appBlockAboutSquare.vue'
 
-const drawer = ref(false)
-const group = ref(null)
+const hiddenMenu = ref(false)
 </script>
 
 <template>
-	<v-app-bar absolute height="150" color="transparent" class="bar-menu">
-		<v-toolbar-title>
-			<h2 class="margin-left-default logo-text text-gradient">ATOMIC</h2>
-		</v-toolbar-title>
-		<v-spacer></v-spacer>
-		<v-app-bar-nav-icon
-			size="3rem"
-			class="bar-menu__icon"
-			@click="drawer = !drawer"></v-app-bar-nav-icon>
-	</v-app-bar>
+	<nav class="bar-menu">
+		<div class="margin-left-default bar-logo">
+			<img src="@/assets/main-logo.svg" alt="main-logo" />
+			<h2 class="logo-text">ATOMIC</h2>
+		</div>
+		<v-icon size="3rem" color="white" class="bar-menu__icon" @click="hiddenMenu = !hiddenMenu">
+			mdi-menu
+		</v-icon>
+	</nav>
 
-	<v-navigation-drawer v-model="drawer" absolute temporary>
-		<v-list nav dense>
-			<v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
-				<v-list-item>
-					<v-list-item-icon>
-						<v-icon>mdi-home</v-icon>
-					</v-list-item-icon>
-					<v-list-item-title>Home</v-list-item-title>
-				</v-list-item>
-
-				<v-list-item>
-					<v-list-item-icon>
-						<v-icon>mdi-account</v-icon>
-					</v-list-item-icon>
-					<v-list-item-title>Account</v-list-item-title>
-				</v-list-item>
-			</v-list-item-group>
-		</v-list>
-	</v-navigation-drawer>
+	<section v-if="hiddenMenu" class="menu">
+		<div class="menu__content flex-row">
+			<div class="menu__navigation flex-column">
+				<p class="menu__navigation__text">Новости</p>
+				<p class="menu__navigation__text">Клиенты</p>
+				<p class="menu__navigation__text">Кейсы</p>
+				<p class="menu__navigation__text">Вакансии</p>
+				<p class="menu__navigation__text">Контакты</p>
+			</div>
+			<div class="menu__about flex-row">
+				<app-block-about-square
+					icon="mdi-chat-outline"
+					text="Напишите нам"></app-block-about-square>
+				<app-block-about-square
+					icon="mdi-phone-outline"
+					text="Позвоните нам"
+					@close="hiddenMenu = !hiddenMenu"></app-block-about-square>
+				<app-block-about-square
+					icon="mdi-calendar-blank-outline"
+					text="Запишитесь на констультацию"></app-block-about-square>
+				<app-block-about-square
+					icon="mdi-send-outline"
+					text="Напишите на почту"></app-block-about-square>
+			</div>
+		</div>
+	</section>
 </template>
 
 <style lang="scss" scoped>
 .bar-menu {
+	top: $margin-default;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 	color: $font-color;
 }
+.bar-logo {
+	display: flex;
+	align-items: center;
+}
 .logo-text {
+	margin-left: 1rem;
 	font-weight: bold;
 }
 .bar-menu__icon {
 	margin-right: $margin-default;
 	background-color: transparent;
 }
-.v-btn--variant-contained {
-	color: white;
+.menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+.menu__content {
+	height: 100%;
+}
+.menu__navigation {
+	border-right: $border;
+	width: 33%;
+	min-width: 624px;
+	margin-left: $margin-default;
+	height: 100%;
+	gap: 1rem;
+	justify-content: center;
+}
+.menu__navigation__text {
+	transition: all 0.5s;
+	font-weight: lighter;
+	font-size: 80px;
+	line-height: 90px;
+	color: #000000;
+}
+.menu__navigation__text:hover {
+	cursor: pointer;
+	background: $linear-gradient;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.menu__about {
+	height: 100%;
+	flex-grow: 1;
 }
 </style>
