@@ -37,9 +37,9 @@ defineEmits(['close'])
 	align-items: flex-start;
 	justify-content: flex-end;
 	height: 50%;
-	width: 50%;
+	width: 100%;
 	flex-grow: 1;
-	flex: 0 0 50%;
+	flex-basis: 50%;
 	gap: 1rem;
 }
 .menu__icon {

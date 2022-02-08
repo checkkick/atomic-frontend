@@ -67,6 +67,7 @@ const hiddenMenu = ref(false)
 	background-color: transparent;
 }
 .menu {
+	z-index: 1;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -77,11 +78,12 @@ const hiddenMenu = ref(false)
 }
 .menu__navigation {
 	border-right: $border-in-light;
-	width: 33%;
-	min-width: 624px;
+	width: 40%;
+	min-width: 25rem;
 	margin-left: $margin-default;
 	height: 100%;
 	gap: 1rem;
+	flex-grow: 1;
 	justify-content: center;
 }
 .menu__navigation__text {
@@ -98,7 +100,8 @@ const hiddenMenu = ref(false)
 	-webkit-text-fill-color: transparent;
 }
 .menu__about {
-	height: 100%;
+	flex-basis: 50%;
+	height: 100vh;
 	flex-grow: 1;
 }
 </style>
