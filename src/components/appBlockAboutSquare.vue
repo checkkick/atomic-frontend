@@ -30,7 +30,7 @@ defineEmits(['close'])
 <style lang="scss" scoped>
 .block {
 	transition: ease-in-out 1s;
-	border: $border;
+	border: $border-in-light;
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;

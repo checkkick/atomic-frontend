@@ -76,7 +76,7 @@ const hiddenMenu = ref(false)
 	height: 100%;
 }
 .menu__navigation {
-	border-right: $border;
+	border-right: $border-in-light;
 	width: 33%;
 	min-width: 624px;
 	margin-left: $margin-default;
