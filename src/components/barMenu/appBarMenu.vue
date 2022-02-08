@@ -46,6 +46,7 @@ const hiddenMenu = ref(false)
 
 <style lang="scss" scoped>
 .bar-menu {
+	z-index: 2;
 	top: $margin-default;
 	position: fixed;
 	display: flex;
@@ -63,11 +64,12 @@ const hiddenMenu = ref(false)
 	font-weight: bold;
 }
 .bar-menu__icon {
+	cursor: pointer;
 	margin-right: $margin-default;
 	background-color: transparent;
 }
 .menu {
-	z-index: 1;
+	z-index: 2;
 	position: fixed;
 	width: 100%;
 	height: 100%;
