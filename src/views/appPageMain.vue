@@ -1,5 +1,7 @@
 <script setup>
+import AppMainClients from '@/components/mainPage/appMainClients.vue'
 import AppMainFirstContent from '@/components/mainPage/appMainFirstContent.vue'
+import AppMainOurWorks from '@/components/mainPage/appMainOurWorks.vue'
 import AppMainSecondContent from '@/components/mainPage/appMainSecondContent.vue'
 </script>
 
@@ -7,6 +9,8 @@ import AppMainSecondContent from '@/components/mainPage/appMainSecondContent.vue
 	<main class="flex-column">
 		<AppMainFirstContent />
 		<AppMainSecondContent />
+		<AppMainClients />
+		<AppMainOurWorks />
 	</main>
 </template>
 

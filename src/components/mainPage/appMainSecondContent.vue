@@ -29,7 +29,8 @@ import appButtonComponent from '@/components/appButtonComponent.vue'
 	flex-basis: 40%;
 }
 .directions__image {
-	width: 100%;
+	height: 100%;
+	width: 80%;
 }
 .services {
 	padding-right: $margin-default;
