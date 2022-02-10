@@ -46,7 +46,7 @@ const hiddenMenu = ref(false)
 .bar-menu {
 	z-index: 2;
 	top: $margin-default;
-	left: 3rem;
+	left: $margin-default - 5px;
 	right: $margin-default;
 	position: fixed;
 	display: flex;
