@@ -122,7 +122,7 @@ function routerPush(path) {
 }
 .menu__navigation__text {
 	transition: all 0.5s;
-	font-weight: lighter;
+	font-weight: 300;
 	font-size: 80px;
 	line-height: 90px;
 	color: #000000;
