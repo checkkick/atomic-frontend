@@ -29,7 +29,7 @@ import appButtonComponent from '@/components/appButtonComponent.vue'
 	flex-basis: 40%;
 }
 .directions__image {
-	height: 100%;
+	height: 80%;
 	width: 80%;
 }
 .services {
