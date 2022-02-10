@@ -80,12 +80,14 @@ let slides = [
 .works__examples {
 	width: 100%;
 	display: inline-block;
-	border: $border-in-dark;
+}
+.swiper {
+	padding-bottom: 6rem;
 }
 .swiper-slide {
 	transition: all 1s;
 	cursor: grab;
-	border-right: $border-in-dark;
+	border: $border-in-dark;
 }
 .swiper-slide::before {
 	position: absolute;
@@ -113,7 +115,8 @@ let slides = [
 .works__examples {
 	::v-deep .swiper-scrollbar {
 		left: 0;
-		bottom: 0;
+		bottom: 3rem;
+		height: 1px;
 		width: 100%;
 		background: #3c3c3c;
 		border-radius: 0;
@@ -121,6 +124,8 @@ let slides = [
 }
 .works__examples {
 	::v-deep .swiper-scrollbar-drag {
+		top: -1px;
+		height: 3px;
 		border-radius: 0;
 		background: white;
 	}
