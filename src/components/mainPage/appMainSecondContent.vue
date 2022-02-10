@@ -1,5 +1,13 @@
 <script setup>
 import appButtonComponent from '@/components/appButtonComponent.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function routerPush() {
+	router.push('/services')
+	window.scrollTo(0, 0)
+}
 </script>
 
 <template>
@@ -11,7 +19,7 @@ import appButtonComponent from '@/components/appButtonComponent.vue'
 			<h2 class="services__text text-gradient">
 				Мы занимаемся комплексным развитием вашего бизнеса онлайн.
 			</h2>
-			<app-button-component text="Наши услуги"></app-button-component>
+			<app-button-component text="Наши услуги" @click="routerPush()"></app-button-component>
 		</div>
 	</section>
 </template>
@@ -29,8 +37,8 @@ import appButtonComponent from '@/components/appButtonComponent.vue'
 	flex-basis: 40%;
 }
 .directions__image {
-	height: 80%;
-	width: 80%;
+	max-height: 80%;
+	max-width: 80%;
 }
 .services {
 	padding-right: $margin-default;
