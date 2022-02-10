@@ -1,4 +1,5 @@
 import appPageMain from '@/views/appPageMain.vue'
+import appPageServices from '@/views/appPageServices.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 export default createRouter({
@@ -9,6 +10,11 @@ export default createRouter({
 			path: '/',
 			name: 'Main',
 			component: appPageMain,
+		},
+		{
+			path: '/services',
+			name: 'Services',
+			component: appPageServices,
 		},
 	],
 })
