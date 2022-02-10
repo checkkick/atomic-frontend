@@ -6,9 +6,9 @@ const hiddenMenu = ref(false)
 </script>
 
 <template>
+	<img class="bar-image" src="@/assets/main-logo.svg" alt="main-logo" />
 	<nav class="bar-menu">
 		<div class="margin-left-default bar-logo">
-			<img src="@/assets/main-logo.svg" alt="main-logo" />
 			<h2 class="logo-text">ATOMIC</h2>
 		</div>
 		<v-icon size="3rem" color="white" class="bar-menu__icon" @click="hiddenMenu = !hiddenMenu">
@@ -49,16 +49,27 @@ const hiddenMenu = ref(false)
 .bar-menu {
 	z-index: 2;
 	top: $margin-default;
+	left: 3rem;
+	right: $margin-default;
 	position: fixed;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 100%;
 	color: $font-color;
+	mix-blend-mode: difference;
 }
 .bar-logo {
+	isolation: isolate;
 	display: flex;
 	align-items: center;
+}
+.bar-image {
+	position: fixed;
+	top: $margin-default;
+	left: $margin-default;
+	z-index: 2;
+	width: 3rem;
+	height: 3rem;
 }
 .logo-text {
 	margin-left: 1rem;
@@ -66,7 +77,6 @@ const hiddenMenu = ref(false)
 }
 .bar-menu__icon {
 	cursor: pointer;
-	margin-right: $margin-default;
 	background-color: transparent;
 }
 .fade-enter-active {
