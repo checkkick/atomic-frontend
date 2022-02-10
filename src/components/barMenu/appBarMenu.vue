@@ -6,11 +6,8 @@ const hiddenMenu = ref(false)
 </script>
 
 <template>
-	<img class="bar-image" src="@/assets/main-logo.svg" alt="main-logo" />
 	<nav class="bar-menu">
-		<div class="margin-left-default bar-logo">
-			<h2 class="logo-text">ATOMIC</h2>
-		</div>
+		<img class="bar-image" src="@/assets/main-logo.svg" alt="main-logo" />
 		<v-icon size="3rem" color="white" class="bar-menu__icon" @click="hiddenMenu = !hiddenMenu">
 			mdi-menu
 		</v-icon>
@@ -58,18 +55,10 @@ const hiddenMenu = ref(false)
 	color: $font-color;
 	mix-blend-mode: difference;
 }
-.bar-logo {
-	isolation: isolate;
-	display: flex;
-	align-items: center;
-}
 .bar-image {
-	position: fixed;
-	top: $margin-default;
-	left: $margin-default;
-	z-index: 2;
-	width: 3rem;
-	height: 3rem;
+	width: 100%;
+	max-width: 137px;
+	max-height: 35.64px;
 }
 .logo-text {
 	margin-left: 1rem;
