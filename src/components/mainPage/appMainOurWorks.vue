@@ -110,15 +110,19 @@ let slides = [
 	align-items: flex-start;
 	justify-content: space-between;
 }
-::v-deep .swiper-scrollbar {
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background: #3c3c3c;
-	border-radius: 0;
+.works__examples {
+	::v-deep .swiper-scrollbar {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: #3c3c3c;
+		border-radius: 0;
+	}
 }
-::v-deep .swiper-scrollbar-drag {
-	border-radius: 0;
-	background: white;
+.works__examples {
+	::v-deep .swiper-scrollbar-drag {
+		border-radius: 0;
+		background: white;
+	}
 }
 </style>
