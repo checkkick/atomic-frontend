@@ -1,13 +1,20 @@
 <script setup>
 import { ref } from 'vue'
 import appBlockAboutSquare from '@/components/appBlockAboutSquare.vue'
+import { useRouter } from 'vue-router'
 
 const hiddenMenu = ref(false)
+const router = useRouter()
+
+function routerPush(path) {
+	router.push(path)
+	window.scrollTo(0, 0)
+}
 </script>
 
 <template>
 	<nav class="bar-menu">
-		<img class="bar-image" src="@/assets/main-logo.svg" alt="main-logo" />
+		<img class="bar-image" src="@/assets/main-logo.svg" alt="main-logo" @click="routerPush('/')" />
 		<v-icon size="3rem" color="white" class="bar-menu__icon" @click="hiddenMenu = !hiddenMenu">
 			mdi-menu
 		</v-icon>
@@ -56,6 +63,7 @@ const hiddenMenu = ref(false)
 	mix-blend-mode: difference;
 }
 .bar-image {
+	cursor: pointer;
 	width: 100%;
 	max-width: 137px;
 	max-height: 35.64px;
