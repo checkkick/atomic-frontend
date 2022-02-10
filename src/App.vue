@@ -1,11 +1,13 @@
 <script setup>
-import AppBarMenu from './components/barMenu/appBarMenu.vue'
+import AppBarMenu from '@/components/barMenu/appBarMenu.vue'
+import AppFooter from '@/components/footer/appFooter.vue'
 </script>
 
 <template>
 	<v-app class="main-app">
 		<AppBarMenu />
 		<router-view />
+		<AppFooter />
 	</v-app>
 </template>
 
