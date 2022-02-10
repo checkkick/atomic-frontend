@@ -18,6 +18,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .button {
+	mix-blend-mode: difference;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -33,7 +34,8 @@ defineProps({
 	align-items: center;
 	gap: 1rem;
 }
-.button__content__icon {
+.button__content__icon,
+.button__content__text {
 	color: white;
 }
 </style>

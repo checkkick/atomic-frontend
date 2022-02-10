@@ -29,7 +29,7 @@ defineEmits(['close'])
 
 <style lang="scss" scoped>
 .block {
-	transition: ease-in-out 1s;
+	transition: all 0.5s;
 	border: $border-in-light;
 	padding: 2rem;
 	display: flex;
