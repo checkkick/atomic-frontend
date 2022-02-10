@@ -14,6 +14,7 @@ const hiddenMenu = ref(false)
 	</nav>
 	<transition name="fade">
 		<section v-if="hiddenMenu" class="menu">
+			<v-icon size="3rem" class="menu__icon" @click="hiddenMenu = !hiddenMenu"> mdi-close </v-icon>
 			<div class="menu__content flex-row">
 				<div class="menu__navigation flex-column">
 					<p class="menu__navigation__text">Новости</p>
@@ -28,8 +29,7 @@ const hiddenMenu = ref(false)
 						text="Напишите нам"></app-block-about-square>
 					<app-block-about-square
 						icon="mdi-phone-outline"
-						text="Позвоните нам"
-						@close="hiddenMenu = !hiddenMenu"></app-block-about-square>
+						text="Позвоните нам"></app-block-about-square>
 					<app-block-about-square
 						icon="mdi-calendar-blank-outline"
 						text="Запишитесь на констультацию"></app-block-about-square>
@@ -90,6 +90,14 @@ const hiddenMenu = ref(false)
 	width: 100%;
 	height: 100%;
 	background-color: white;
+}
+
+.menu__icon {
+	mix-blend-mode: difference;
+	cursor: pointer;
+	position: absolute;
+	top: $margin-default;
+	right: $margin-default;
 }
 .menu__content {
 	height: 100%;

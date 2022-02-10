@@ -9,19 +9,10 @@ defineProps({
 		default: '',
 	},
 })
-
-defineEmits(['close'])
 </script>
 
 <template>
 	<div class="block">
-		<v-icon
-			v-if="icon === 'mdi-phone-outline'"
-			size="3rem"
-			class="menu__icon"
-			@click="$emit('close')">
-			mdi-close
-		</v-icon>
 		<v-icon class="block__icon"> {{ icon }} </v-icon>
 		<p class="block__text">{{ text }}</p>
 	</div>
@@ -41,13 +32,6 @@ defineEmits(['close'])
 	flex-grow: 1;
 	flex-basis: 50%;
 	gap: 1rem;
-}
-.menu__icon {
-	cursor: pointer;
-	color: black;
-	position: absolute;
-	top: $margin-default;
-	right: $margin-default;
 }
 .block__icon {
 	color: black;
