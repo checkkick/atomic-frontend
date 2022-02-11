@@ -19,7 +19,7 @@ import AppButtonComponent from '@/components/appButtonComponent.vue'
 				<p>lorem ipsum</p>
 			</div>
 		</div>
-		<AppButtonComponent text="Подробнее" />
+		<AppButtonComponent style="mix-blend-mode: normal" text="Подробнее" />
 	</section>
 </template>
 
