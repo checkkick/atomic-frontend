@@ -7,6 +7,7 @@ const hiddenMenu = ref(false)
 const router = useRouter()
 
 function routerPush(path) {
+	hiddenMenu.value = false
 	router.push(path)
 	window.scrollTo(0, 0)
 }
@@ -25,7 +26,7 @@ function routerPush(path) {
 			<div class="menu__content flex-row">
 				<div class="menu__navigation flex-column">
 					<p class="menu__navigation__text">Новости</p>
-					<p class="menu__navigation__text">Клиенты</p>
+					<p class="menu__navigation__text" @click="routerPush('/about')">О нас</p>
 					<p class="menu__navigation__text">Кейсы</p>
 					<p class="menu__navigation__text">Вакансии</p>
 					<p class="menu__navigation__text">Контакты</p>
