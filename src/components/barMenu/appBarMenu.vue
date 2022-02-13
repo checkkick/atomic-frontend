@@ -139,4 +139,41 @@ function routerPush(path) {
 	height: 100vh;
 	flex-grow: 1;
 }
+
+@media screen and (max-width: 650px) {
+	.bar-menu {
+		top: $margin-default-mobile;
+		left: $margin-default-mobile;
+		right: $margin-default-mobile;
+	}
+	.menu {
+		height: 100vh;
+	}
+	.menu__icon {
+		top: $margin-default-mobile;
+		right: $margin-default-mobile;
+	}
+	.menu__content {
+		height: 100vh;
+		flex-direction: column;
+	}
+	.menu__navigation__text {
+		font-size: 45px;
+		line-height: 46px;
+	}
+	.menu__navigation {
+		border-right: none;
+		width: 100%;
+		min-width: auto;
+		margin: $margin-default $margin-default-mobile $margin-default-mobile $margin-default-mobile;
+		height: auto;
+		gap: 2rem;
+	}
+	.menu__about {
+		flex-basis: 100%;
+		width: 100%;
+		height: auto;
+		flex-grow: 1;
+	}
+}
 </style>

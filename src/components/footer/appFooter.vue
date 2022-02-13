@@ -82,4 +82,25 @@ import appBlockAboutSquare from '@/components/appBlockAboutSquare.vue'
 	font-size: $font-size-small + 3px;
 	line-height: 19px;
 }
+
+@media screen and (max-width: 650px) {
+	.footer-content {
+		flex-direction: column !important;
+	}
+	.footer-content__heading {
+		border: $border-in-light;
+		padding: $margin-default $margin-default-mobile;
+		width: 100%;
+		min-width: auto;
+		justify-content: flex-end;
+		gap: 4rem;
+		flex-grow: 1;
+		flex-basis: auto;
+	}
+	.footer-content__works {
+		flex-basis: auto;
+		height: auto;
+		flex-grow: 1;
+	}
+}
 </style>

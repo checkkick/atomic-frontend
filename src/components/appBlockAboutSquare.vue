@@ -54,4 +54,19 @@ defineProps({
 		color: white;
 	}
 }
+
+@media screen and (max-width: 650px) {
+	.block {
+		padding: 2rem 1rem;
+		height: auto;
+		width: auto;
+		flex-grow: 1;
+		flex-basis: 50%;
+		gap: 1rem;
+	}
+	.block__text {
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
 </style>

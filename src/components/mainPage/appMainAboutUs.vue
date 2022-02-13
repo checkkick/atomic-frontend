@@ -54,4 +54,10 @@ import AppButtonComponent from '@/components/appButtonComponent.vue'
 	font-size: $font-size-large + 60px;
 	line-height: $line-height-large;
 }
+
+@media screen and (max-width: 650px) {
+	.about-us__digits {
+		flex-direction: column !important;
+	}
+}
 </style>

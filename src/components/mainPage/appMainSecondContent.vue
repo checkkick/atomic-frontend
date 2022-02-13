@@ -54,4 +54,24 @@ function routerPush() {
 	line-height: 36px;
 	letter-spacing: -0.05em;
 }
+
+@media screen and (max-width: 650px) {
+	.content {
+		flex-direction: column;
+		height: auto;
+		gap: 1rem;
+		padding-bottom: 2rem;
+	}
+	.services {
+		padding: 0 $margin-default-mobile;
+		flex-basis: 100%;
+		gap: 2rem;
+	}
+	.services__text {
+		width: 100%;
+		font-weight: normal;
+		font-size: 40px;
+		line-height: 43px;
+	}
+}
 </style>

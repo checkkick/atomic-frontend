@@ -50,7 +50,14 @@ let slides = [
 				:scrollbar="{
 					hide: false,
 				}"
-				:slides-per-view="3"
+				:breakpoints="{
+					0: {
+						slidesPerView: 1,
+					},
+					650: {
+						slidesPerView: 3,
+					},
+				}"
 				:space-between="0"
 				:modules="modules"
 				:free-mode="true"
@@ -128,6 +135,15 @@ let slides = [
 		height: 3px;
 		border-radius: 0;
 		background: white;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.works__title {
+		padding: $margin-default $margin-default-mobile;
+	}
+	.works__title__text {
+		font-size: $font-size-large - 30px;
 	}
 }
 </style>

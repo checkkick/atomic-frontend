@@ -30,4 +30,19 @@
 	padding: $margin-default;
 	border: $border-in-dark;
 }
+
+@media screen and (max-width: 650px) {
+	.clients__title {
+		padding: $margin-default $margin-default-mobile;
+	}
+	.clients__title__text {
+		font-size: $font-size-large - 30px;
+	}
+	.clients__logo {
+		flex-direction: column;
+		gap: 3rem;
+		justify-content: center;
+		padding: $margin-default;
+	}
+}
 </style>

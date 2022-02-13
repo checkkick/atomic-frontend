@@ -124,4 +124,36 @@ let peoples = [
 		line-height: 120%;
 	}
 }
+
+@media screen and (max-width: 650px) {
+	.our-team__title {
+		padding: $margin-default $margin-default-mobile;
+	}
+	.our-team__table {
+		flex-direction: column !important;
+	}
+	.our-team__table__title {
+		padding: $margin-default $margin-default-mobile;
+		flex-basis: auto;
+	}
+	.our-team__table__peoples {
+		flex-grow: 1;
+		flex-basis: auto;
+
+		h3 {
+			border: $border-in-light;
+			padding: $margin-default $margin-default-mobile;
+		}
+	}
+	.our-team__table__peoples__item {
+		border: $border-in-light;
+		padding: $margin-default-mobile;
+		justify-content: space-evenly;
+		gap: 1rem;
+
+		.people {
+			width: 100%;
+		}
+	}
+}
 </style>

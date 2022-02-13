@@ -56,7 +56,14 @@ let slides = [
 				:scrollbar="{
 					hide: false,
 				}"
-				:slides-per-view="3.5"
+				:breakpoints="{
+					0: {
+						slidesPerView: 1,
+					},
+					650: {
+						slidesPerView: 3.5,
+					},
+				}"
 				:space-between="0"
 				:modules="modules"
 				:free-mode="true"
@@ -135,6 +142,23 @@ let slides = [
 		top: -1px;
 		height: 3px;
 		background: #3c3c3c;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.services {
+		padding-top: $margin-default * 2;
+	}
+	.services__title {
+		padding-left: $margin-default-mobile;
+	}
+	.swiper-slide__section__text {
+		min-height: auto;
+		height: 12rem;
+		margin: $margin-default-mobile;
+		font-weight: 300;
+		gap: 2rem;
+		justify-content: center;
 	}
 }
 </style>

@@ -50,3 +50,11 @@ p {
 .margin-left-default {
 	margin-left: $margin-default;
 }
+
+@media screen and (max-width: 650px) {
+	h1 {
+		font-size: $font-size-large - 30px;
+		line-height: $line-height-large - 30px;
+		font-weight: normal;
+	}
+}

@@ -37,4 +37,21 @@ import appMainBlockSquare from '@/components/mainPage/appMainBlockSquare.vue'
 	height: 100vh;
 	flex-grow: 1;
 }
+
+@media screen and (max-width: 650px) {
+	.main-content {
+		height: 100vh;
+		flex-direction: column;
+	}
+	.main-content__heading {
+		padding: 50% $margin-default-mobile $margin-default $margin-default-mobile;
+		width: 100%;
+		min-width: auto;
+	}
+	.main-content__works {
+		flex-basis: 50%;
+		height: auto;
+		flex-grow: 1;
+	}
+}
 </style>

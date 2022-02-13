@@ -131,4 +131,47 @@ import AppButtonComponent from '@/components/appButtonComponent.vue'
 		color: #f2f2f2;
 	}
 }
+
+@media screen and (max-width: 650px) {
+	.about {
+		padding-top: $margin-default * 2.5;
+		min-height: auto;
+	}
+	.about__title__text {
+		padding-bottom: $margin-default;
+		padding-left: $margin-default-mobile;
+	}
+	.priorities {
+		flex-direction: column !important;
+	}
+	.priorities__item {
+		border: $border-in-dark;
+		padding: $margin-default $margin-default-mobile;
+		flex-grow: 1;
+		flex-basis: 33%;
+		gap: 3rem;
+	}
+	.free-audit {
+		border: $border-in-dark;
+		padding: $margin-default $margin-default-mobile;
+		gap: $margin-default;
+		align-items: center;
+
+		h2 {
+			line-height: 50px;
+		}
+	}
+	.about__disclaimer {
+		padding: $margin-default $margin-default-mobile;
+
+		h2 {
+			max-width: none;
+			font-size: 50px;
+			line-height: 45px;
+		}
+		p {
+			max-width: none;
+		}
+	}
+}
 </style>
