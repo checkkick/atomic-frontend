@@ -10,39 +10,6 @@ import 'swiper/css/free-mode'
 import { Scrollbar, FreeMode } from 'swiper'
 
 let modules = [Scrollbar, FreeMode]
-
-let slides = [
-	{
-		title: 'Digital strategy',
-		text: 'Разрабатываем долгосрочные и краткосрочные стратегические планы.',
-		image: './src/assets/services-images/service-1.png',
-	},
-	{
-		title: 'Ecom & digital promo',
-		text: 'Анализируем статистику и разрабатываем стратегию увеличения продаж.',
-		image: './src/assets/services-images/service-2.png',
-	},
-	{
-		title: 'SMM',
-		text: 'Используем социальные сети для достижения максимального результата.',
-		image: './src/assets/services-images/service-3.png',
-	},
-	{
-		title: 'Online events',
-		text: 'Организовываем онлайн-трансляции, виртуальные конференции и форумы.',
-		image: './src/assets/services-images/service-1.png',
-	},
-	{
-		title: 'Digital strategy',
-		text: 'Разрабатываем долгосрочные и краткосрочные стратегические планы.',
-		image: './src/assets/services-images/service-2.png',
-	},
-	{
-		title: 'Ecom & digital promo',
-		text: 'Анализируем статистику и разрабатываем стратегию увеличения продаж.',
-		image: './src/assets/services-images/service-3.png',
-	},
-]
 </script>
 
 <template>
@@ -68,12 +35,57 @@ let slides = [
 				:modules="modules"
 				:free-mode="true"
 				class="swiper">
-				<swiper-slide v-for="(item, idx) in slides" :key="idx" class="swiper-slide">
+				<swiper-slide class="swiper-slide">
 					<div class="swiper-slide__section">
-						<img :src="item.image" alt="service-1" />
+						<img src="@/assets/services-images/service-1.png" alt="service-1" />
 						<div class="swiper-slide__section__text">
-							<h2>{{ item.title }}</h2>
-							<p>{{ item.text }}</p>
+							<h2>Digital strategy</h2>
+							<p>Разрабатываем долгосрочные и краткосрочные стратегические планы.</p>
+						</div>
+					</div>
+				</swiper-slide>
+				<swiper-slide class="swiper-slide">
+					<div class="swiper-slide__section">
+						<img src="@/assets/services-images/service-2.png" alt="service-2" />
+						<div class="swiper-slide__section__text">
+							<h2>Ecom & digital promo</h2>
+							<p>Анализируем статистику и разрабатываем стратегию увеличения продаж.</p>
+						</div>
+					</div>
+				</swiper-slide>
+				<swiper-slide class="swiper-slide">
+					<div class="swiper-slide__section">
+						<img src="@/assets/services-images/service-3.png" alt="service-3" />
+						<div class="swiper-slide__section__text">
+							<h2>SMM</h2>
+							<p>Используем социальные сети для достижения максимального результата.</p>
+						</div>
+					</div>
+				</swiper-slide>
+				<swiper-slide class="swiper-slide">
+					<div class="swiper-slide__section">
+						<img src="@/assets/services-images/service-1.png" alt="service-1" />
+						<div class="swiper-slide__section__text">
+							<h2>Online events</h2>
+							<p>Организовываем онлайн-трансляции, виртуальные конференции и форумы.</p>
+						</div>
+					</div>
+				</swiper-slide>
+				<swiper-slide class="swiper-slide">
+					<div class="swiper-slide__section">
+						<img src="@/assets/services-images/service-2.png" alt="service-2" />
+						<div class="swiper-slide__section__text">
+							<h2>Ecom & digital promo</h2>
+							<p>Анализируем статистику и разрабатываем стратегию увеличения продаж.</p>
+						</div>
+					</div>
+				</swiper-slide>
+				<swiper-slide class="swiper-slide">
+					<div class="swiper-slide__section">
+						<img src="@/assets/services-images/service-3.png" alt="service-3" />
+						<div class="swiper-slide__section__text">
+							<h2>SMM</h2>
+							<p>Используем социальные сети для достижения максимального результата.</p>
 						</div>
 					</div>
 				</swiper-slide>

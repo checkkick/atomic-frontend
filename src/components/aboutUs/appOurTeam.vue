@@ -1,47 +1,4 @@
-<script setup>
-let peoples = [
-	{
-		name: 'Дмитрий Иванов',
-		text: 'CEO & founder',
-		image: './src/assets/about-us/ivanov.png',
-	},
-	{
-		name: 'Мария Говорова',
-		text: 'Арт-директор',
-		image: './src/assets/about-us/govorova.png',
-	},
-	{
-		name: 'Ренат Улыбаев',
-		text: 'Директор по маркетингу',
-		image: './src/assets/about-us/ulyibayev.png',
-	},
-	{
-		name: 'Елена Пучкова',
-		text: 'Ведущий дизайнер',
-		image: './src/assets/about-us/puchkova.png',
-	},
-	{
-		name: 'Мария Говорова',
-		text: 'Арт-директор',
-		image: './src/assets/about-us/govorova.png',
-	},
-	{
-		name: 'Дмитрий Иванов',
-		text: 'CEO & founder',
-		image: './src/assets/about-us/ivanov.png',
-	},
-	{
-		name: 'Елена Пучкова',
-		text: 'Ведущий дизайнер',
-		image: './src/assets/about-us/puchkova.png',
-	},
-	{
-		name: 'Ренат Улыбаев',
-		text: 'Директор по маркетингу',
-		image: './src/assets/about-us/ulyibayev.png',
-	},
-]
-</script>
+<script setup></script>
 
 <template>
 	<main class="our-team flex-column">
@@ -54,10 +11,45 @@ let peoples = [
 			</div>
 			<div class="our-team__table__peoples flex-column">
 				<div class="our-team__table__peoples__item flex-row">
-					<div v-for="(item, idx) in peoples" :key="idx" class="people flex-column">
-						<img :src="item.image" alt="" />
-						<h4>{{ item.name }}</h4>
-						<p class="text-gradient">{{ item.text }}</p>
+					<div class="people flex-column">
+						<img src="@/assets/about-us/ivanov.png" alt="ivanov" />
+						<h4>Дмитрий Иванов</h4>
+						<p class="text-gradient">CEO & founder</p>
+					</div>
+					<div class="people flex-column">
+						<img src="@/assets/about-us/govorova.png" alt="govorova" />
+						<h4>Мария Говорова</h4>
+						<p class="text-gradient">Арт-директор</p>
+					</div>
+					<div class="people flex-column">
+						<img src="@/assets/about-us/ulyibayev.png" alt="ulyibaev" />
+						<h4>Ренат Улыбаев</h4>
+						<p class="text-gradient">Директор по маркетингу</p>
+					</div>
+					<div class="people flex-column">
+						<img src="@/assets/about-us/puchkova.png" alt="puchkova" />
+						<h4>Елена Пучкова</h4>
+						<p class="text-gradient">Ведущий дизайнер</p>
+					</div>
+					<div class="people flex-column">
+						<img src="@/assets/about-us/govorova.png" alt="govorova" />
+						<h4>Мария Говорова</h4>
+						<p class="text-gradient">Арт-директор</p>
+					</div>
+					<div class="people flex-column">
+						<img src="@/assets/about-us/ivanov.png" alt="ivanov" />
+						<h4>Дмитрий Иванов</h4>
+						<p class="text-gradient">CEO & founder</p>
+					</div>
+					<div class="people flex-column">
+						<img src="@/assets/about-us/puchkova.png" alt="puchkova" />
+						<h4>Елена Пучкова</h4>
+						<p class="text-gradient">Ведущий дизайнер</p>
+					</div>
+					<div class="people flex-column">
+						<img src="@/assets/about-us/ulyibayev.png" alt="ulyibaev" />
+						<h4>Ренат Улыбаев</h4>
+						<p class="text-gradient">Директор по маркетингу</p>
 					</div>
 				</div>
 				<h3>Вакансии</h3>
